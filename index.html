@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דרוס ת'דוס - משחק נהיגה</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- HUD - מידע על המשחק -->
+        <div class="hud">
+            <div class="score">ניקוד: <span id="score">0</span></div>
+            <div class="lives"><span id="lives">❤️❤️❤️</span></div>
+        </div>
+        
+        <!-- אזור המשחק -->
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+            
+            <!-- כפתורי שליטה למובייל -->
+            <div class="mobile-controls">
+                <div class="vertical-controls">
+                    <button class="control-btn left-btn" id="leftBtn">➡️</button>
+                </div>
+                <button class="control-btn forward-btn" id="forwardBtn">⬆️</button>
+                <button class="control-btn backward-btn" id="backwardBtn">⬇️</button>
+                <button class="control-btn right-btn" id="rightBtn">⬅️</button>
+            </div>
+        </div>
+        
+        <!-- מסך התחלה -->
+        <div class="start-screen" id="startScreen">
+            <h1>🚗 דרוס ת'דוס 🚗</h1>
+            <p>נהג על הכביש ואסוף דוסים!</p>
+            <p>היזהר ממכשולים!</p>
+            <button id="startBtn">התחל משחק</button>
+        </div>
+        
+        <!-- מסך סיום משחק -->
+        <div class="game-over-screen" id="gameOverScreen" style="display: none;">
+            <h1>🎮 סוף המשחק! 🎮</h1>
+            <p>הניקוד הסופי שלך: <span id="finalScore">0</span></p>
+            <button id="restartBtn">שחק שוב</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
